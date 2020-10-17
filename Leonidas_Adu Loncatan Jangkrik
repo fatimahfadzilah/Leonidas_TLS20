@@ -1,0 +1,37 @@
+#include <math.h>
+#include <stdio.h>
+int main()
+{
+	printf("\nPROGRAM LOMPATAN JANGKRIK DENIS\n");
+	printf("________________________________\n\n");
+	printf("Masukkan angka dengan urutan\n");
+	printf("posisi1 panjanglompatan1 posisi2 panjanglompatan2\n\n");
+    
+    int x1,v1,x2,v2, i;
+    printf("masukkan perkiraan angkamu: ");
+    scanf("%d %d %d %d",&x1,&v1,&x2,&v2);
+	
+	if(0<=x1 && x1<x2 && x2<=1000 && 1<=v1 && v1<=1000 && 1<=v2 && v2<=1000){
+		for (i = 1; i<100; i++)
+		{
+			x1+=v1;
+			printf("Posisi jangkarik pada lompatan ke-%d= %d\n", i, x1);
+			x2+=v2;
+			printf("Posisi jangkarik pada lompatan ke-%d= %d\n\n", i, x2);
+			if (x1 == x2)
+			break;
+
+		}
+    
+		if(x1==x2){
+			printf("kedua jangkrik bertemu eaaa :D\n");
+		}
+		else{
+			printf("kedua jangkrik tidak bertemu :(\n");
+		}
+	}	
+	else {
+		printf("program berhenti karena data tidak valid");
+	}
+return 0;
+}
