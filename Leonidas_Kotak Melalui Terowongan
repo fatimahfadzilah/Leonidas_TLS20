@@ -1,0 +1,53 @@
+/*Constraints
+1<=n<=100
+1 <=length  width<=100, 1<=height<=41*/
+#include <stdio.h>
+
+int main(){
+int i=1, n, vol; /*n=amount, vol=volume*/
+struct box
+{
+int l[i],w[i],h[i];
+} 
+v;
+
+printf("\nBOXES THROUGH A TUNNEL PROGRAM\n");
+printf("________________________________\n");
+printf("Input the number of boxes\n(1-100): ");
+scanf("%d",&n);
+printf("________________________________\n");
+
+if(n>=1 && n<=100){
+    do {
+        printf("The size of the box number-%d\n",i);
+        printf("Input length: ");
+        scanf("%d",&v.l[i]);
+        printf("Input width: ");
+        scanf("%d",&v.w[i]);
+        printf("Input height: ");
+        scanf("%d",&v.h[i]);
+        
+        if((v.l[i])>=1 && (v.l[i])<=100 && (v.w[i])>=1 && (v.w[i])<=100 && (v.h[i]>=1) && (v.h[i]<41))
+        {
+            vol=(v.l[i])*(v.w[i])*(v.h[i]);
+            printf("The volume of the box is %d\n", vol);
+			printf("The box can pass through the tunnel\n");
+        }
+        else{
+            printf("The size of the box didin't pass the criteria\n");
+            printf("In order to pass through the tunnel,the data must have following contraints:");
+            printf("\nlength[1,100]==========width[1,100]==========height[1,41]\n");
+            }
+        i++;
+        printf("\n");
+        }
+     while(i<=n);
+     return 0;
+    }
+    
+    else {
+        printf("Program has stopped because the data was invalid\n");
+        printf("Interval number of boxes to be vald is [1,100]");
+    }
+    return 0;
+}
